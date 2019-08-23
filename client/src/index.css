@@ -75,3 +75,64 @@ body {
   color: red;
   text-align: center;
 }
+
+.updateMovieForm {
+  
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+
+.updateMovieForm h3 {
+  font-size: 30px;
+}
+
+.updateMovieForm input {
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid lightgrey;
+  padding: 10px;
+  margin: 5px;
+}
+
+.updateMovieForm button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgb(0, 132, 255);
+  color: white;
+  box-shadow: 2px 2px 5px grey;
+  font-size: 20px;
+  margin: 15px;
+  transition: .5s;
+}
+
+.updateMovieForm button:hover {
+  background-color: rgb(68, 165, 255);
+  cursor: pointer;
+}
+
+.updateMovieButton {
+  width: fit-content;
+  background-color: rgb(0, 197, 0);
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 10px;
+  position: absolute;
+  
+  
+}
+
+.buttonButton {
+  margin-left: 1200px;
+  width: fit-content;
+  margin-top: -235px;
+
+  
+}
+
