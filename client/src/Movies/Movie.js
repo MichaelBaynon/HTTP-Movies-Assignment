@@ -1,8 +1,8 @@
 import React from "react";
 import axios from "axios";
 import MovieCard from "./MovieCard";
+import {Link, Route} from 'react-router-dom'
 import UpdateMovie from './UpdateMovie'
-import {Route, Link} from 'react-router-dom'
 
 export default class Movie extends React.Component {
   constructor(props) {
@@ -34,14 +34,14 @@ export default class Movie extends React.Component {
     addToSavedList(this.state.movie);
   };
 
-deleteMovie = event => {
-  event.preventDefault()
-  axios.delete(`http://localhost:5000/api/movies/${this.state.movie.id}`)
-  .then(res => {
-    this.props.history.push('/')
-  })
-  .catch(err => console.log(err.response))
-}
+  deleteMovie = event => {
+    event.preventDefault()
+    axios.delete(`http://localhost:5000/api/movies/${this.state.movie.id}`)
+    .then(res => {
+      this.props.history.push('/')
+    })
+    .catch(err => console.log(err.response))
+  }
 
   render() {
     if (!this.state.movie) {
@@ -53,13 +53,14 @@ deleteMovie = event => {
         <MovieCard movie={this.state.movie} />
         <div className="save-button" onClick={this.saveMovie}>
           Save
-          
         </div>
-        <div className='buttonButton'>
-        <Link  className='updateMovieButton' to={`/update-movie/${this.state.movie.id}`}>Update Movie</Link>
-        </div>
-        <button onClick={this.deleteMovie} >Delete</button>
-        
+        <Link  to={`/update-movie/${this.state.movie.id}`} className='update-button'>
+          Update Movie
+        </Link>
+        <button className='delete-button' onClick={this.deleteMovie}>Delete Movie</button>
+
+        <Route path={`/update-movie/${this.state.movie.id}`} component={UpdateMovie} />
+
       </div>
     );
   }

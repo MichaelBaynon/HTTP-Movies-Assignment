@@ -5,6 +5,14 @@ body {
   background-color: #f2f2f2;
 }
 
+.example {
+  transition: .4s;
+}
+
+.example:hover {
+ color: white;
+}
+
 .movie-card {
   background-color: #fff;
   border: 0;
@@ -136,3 +144,54 @@ body {
   
 }
 
+
+.update-button {
+  position: absolute;
+  top: 205px;
+  right: 15px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: rgb(188, 255, 188);
+  color: blue;
+  border: 1px solid blue;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px;
+  transition: .5s;
+}
+
+.update-button:hover {
+  color: rgb(84, 139, 0);
+  background-color: white;
+  border: 1px solid rgb(84, 139, 0);
+}
+
+.updateMovieForm {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 25px;
+  box-shadow: 3px 3px 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin-top: 120px;
+}
+
+.updateMovieForm h3 {
+  padding-left: 120px;
+}
+
+.delete-button {
+  position: absolute;
+  top: 205px;
+  right: 195px;
+  border: 1px solid grey;
+  padding: 5px 10px;
+  background-color: crimson;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 10px;
+  transition: .5s;
+}
